@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mubarak Shah | Vibe Coder, App & Website Builder</title>
+<meta name="description" content="Mubarak Shah is a digital creator from Mianwali, Pakistan specializing in vibe coding, website and app development, video editing, and social media marketing.">
+<meta name="keywords" content="Mubarak Shah, Mubarak Shah Mianwali, Vibe Coder Pakistan, Website Developer Pakistan, App Developer Pakistan, Video Editor Pakistan, Social Media Marketing Pakistan">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#04050d;--fg:#f4f5ff;--mut:#9aa0c4;--glass:rgba(255,255,255,.05);--bd:rgba(150,160,255,.22);--a:#6f8bff;--b:#9b6bff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#04050d}}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:'Space Grotesk',system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
+canvas#sky{position:fixed;inset:0;z-index:0}
+nav{position:fixed;top:env(safe-area-inset-top,0px);left:50%;transform:translateX(-50%);z-index:20;margin-top:12px;display:flex;gap:18px;align-items:center;padding:10px 20px;background:var(--glass);border:1px solid var(--bd);border-radius:99px;backdrop-filter:blur(14px);max-width:96vw;overflow-x:auto;white-space:nowrap}
+nav b{font-weight:700}nav a{color:var(--mut);text-decoration:none;font-size:14px}nav a:hover{color:#fff}
+.btn{display:inline-block;padding:12px 24px;border-radius:99px;border:1px solid var(--bd);color:#fff;text-decoration:none;background:var(--glass);cursor:pointer;font:inherit;transition:.3s}
+.btn.p{background:linear-gradient(135deg,var(--a),var(--b));border:0;box-shadow:0 0 30px rgba(111,139,255,.35)}.btn:hover{transform:translateY(-2px)}
+section{position:relative;z-index:1;padding:90px 6vw;max-width:1100px;margin:auto}
+#universe{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;max-width:none;padding-top:110px}
+h1{font-size:clamp(2.6rem,9vw,6.5rem);margin:.2em 0;letter-spacing:-.03em;line-height:1;background:linear-gradient(180deg,#fff,#a9b4ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+h2{font-size:clamp(2rem,5vw,3.4rem);margin:0 0 .4em;letter-spacing:-.02em}
+.head{color:var(--a);letter-spacing:.08em;font-size:clamp(.8rem,2vw,1rem)}.sub{color:var(--mut);max-width:620px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin:20px 0}
+.galaxy{position:relative;width:min(92vw,720px);height:min(70vw,440px);margin:20px auto}
+.star{position:absolute;left:50%;top:50%;width:26px;height:26px;margin:-13px;border-radius:50%;background:radial-gradient(#fff,#ffd98a 40%,transparent 70%);cursor:pointer;box-shadow:0 0 40px #ffd98a}
+.planet{position:absolute;border:0;border-radius:50%;cursor:pointer;transition:transform .35s,filter .35s,box-shadow .35s;color:#fff;font:inherit;display:flex;align-items:center;justify-content:center;font-size:clamp(18px,4vw,30px);animation:fl 6s ease-in-out infinite;box-shadow:inset -10px -10px 24px rgba(0,0,0,.55),0 0 18px var(--c)}
+.planet:hover,.planet:focus-visible{transform:scale(1.18);filter:brightness(1.3);box-shadow:inset -10px -10px 24px rgba(0,0,0,.5),0 0 50px var(--c);z-index:3}
+.planet span{position:absolute;top:105%;font-size:12px;white-space:nowrap;opacity:0;transition:.3s}.planet:hover span,.planet:focus-visible span{opacity:1}
+@keyframes fl{50%{translate:0 -10px}}
+#tip{min-height:3em;color:var(--mut);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.card{background:var(--glass);border:1px solid var(--bd);border-radius:20px;padding:22px;backdrop-filter:blur(10px);transition:.3s}.card:hover{transform:translateY(-6px);border-color:var(--a);box-shadow:0 0 30px rgba(111,139,255,.2)}
+.card small{color:var(--a)}.card h3{margin:.3em 0}.card p{color:var(--mut);margin:.3em 0}
+.thumb{height:90px;border-radius:12px;margin-bottom:10px;background:linear-gradient(135deg,#1b2260,#4a2c8a);opacity:.7}
+.ph{color:#c9a85a;font-size:12px}
+.badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.badges span{padding:8px 16px;border:1px solid var(--bd);border-radius:99px;background:var(--glass);animation:fl 5s ease-in-out infinite}
+#constel{width:100%;height:auto;background:var(--glass);border:1px solid var(--bd);border-radius:20px}
+#panel{position:fixed;inset:0;z-index:30;background:rgba(4,5,13,.88);backdrop-filter:blur(8px);display:none;overflow:auto;padding:90px 6vw 40px}
+#panel.on{display:block;animation:in .5s}@keyframes in{from{opacity:0;transform:scale(.92)}}
+#panel .in{max-width:1000px;margin:auto}
+form{display:grid;gap:12px;max-width:560px}input,select,textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--bd);background:var(--glass);color:#fff;font:inherit}
+select option{color:#000}.links{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+footer{position:relative;z-index:1;text-align:center;color:var(--mut);padding:40px;font-size:13px}
+#egg{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);z-index:40;padding:16px 24px;background:var(--glass);border:1px solid var(--a);border-radius:20px;backdrop-filter:blur(14px);display:none;text-align:center}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style></head><body>
+<canvas id="sky"></canvas>
+<nav><b>Mubarak Shah</b><a href="#universe">Universe</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#contact">Contact</a><a class="btn p" style="padding:6px 14px;color:#fff" href="#galaxy">Explore</a></nav>
+
+<section id="universe">
+<div class="head">📍 Mianwali, Pakistan</div>
+<h1>MUBARAK SHAH</h1>
+<div class="head">Vibe Coder • App &amp; Website Builder • Video Editor • Social Media Marketer</div>
+<p class="sub">I build digital experiences, websites, apps, visual content, and social media brands from Mianwali, Pakistan.</p>
+<div class="cta"><a class="btn p" href="#galaxy">Explore My Universe</a><a class="btn" href="#contact">Let's Work Together</a></div>
+<div class="galaxy" id="galaxy"><div class="star" id="core" title="✦"></div></div>
+<div id="tip">Hover a planet. Click to enter.</div>
+</section>
+
+<section id="about"><h2>Meet the Creator</h2>
+<p class="sub">I'm Mubarak Shah, a digital creator from Mianwali, Pakistan. I combine vibe coding, web and app development, video editing, and social media marketing to turn ideas into digital experiences.</p>
+<div class="badges" id="badges"></div></section>
+
+<section id="skills"><h2>Skill Constellation</h2><p class="sub">Larger stars mean stronger focus. Hover to light up a skill.</p>
+<svg id="constel" viewBox="0 0 800 420" role="img" aria-label="Skill constellation"></svg></section>
+
+<section id="services"><h2>Services</h2><div class="grid" id="svc"></div></section>
+
+<section id="projects"><h2>Projects</h2><p class="ph">Placeholder projects — replace in the DATA section of the code.</p><div class="grid" id="prj"></div></section>
+
+<section id="contact"><h2>Start a Mission With Me</h2><p class="sub">Have an idea? Let's turn it into something real.</p>
+<form id="cf"><input placeholder="Name" required><input type="email" placeholder="Email" required>
+<select><option>Website</option><option>App</option><option>Video Editing</option><option>Social Media Marketing</option><option>Other</option></select>
+<input placeholder="Budget"><textarea rows="4" placeholder="Message"></textarea>
+<button class="btn p" type="submit">Launch Project 🚀</button><div id="ok" class="sub"></div></form>
+<p><b>Mubarak Shah</b><br>Mianwali, Pakistan</p>
+<div class="links" id="links"></div></section>
+<footer>A digital universe built by Mubarak Shah.</footer>
+
+<div id="panel"><div class="in"><button class="btn" id="back">← Return to Universe</button><h2 id="pt" style="margin-top:24px"></h2><p class="sub" id="pd"></p><div class="grid" id="pg"></div></div></div>
+<div id="egg"><b>You found a hidden planet 🚀</b><br>Keep building. Keep creating.</div>
+
+<script>
+/* ===== DATA — edit here ===== */
+const planets=[
+{n:"Web Planet",i:"🌐",c:"#4f7bff",d:"Websites, landing pages, business sites, modern UI.",p:["Modern business website","SaaS landing page","Portfolio website","E-commerce website"],t:"Web Development"},
+{n:"App Planet",i:"📱",c:"#9b6bff",d:"Mobile apps, web apps, SaaS concepts.",p:["Productivity app","AI-powered app","Business utility app"],t:"App Development"},
+{n:"Motion Planet",i:"🎬",c:"#ff6b9b",d:"Reels, short-form, promos, motion graphics.",p:["Social media reel","Promotional video","YouTube video"],t:"Video Editing"},
+{n:"Marketing Planet",i:"📣",c:"#38d6c4",d:"Content strategy, campaigns, brand growth.",p:["Social media campaign","Brand content strategy","Content calendar"],t:"Marketing"},
+{n:"Ideas Planet",i:"💡",c:"#ffb44f",d:"Experiments, vibe-coded projects, AI ideas.",p:["Vibe-coded experiment","AI experiment","Creative concept"],t:"Ideas"},
+{n:"About Planet",i:"👨‍🚀",c:"#8fa0ff",d:"Mubarak, skills, journey — Mianwali, Pakistan.",p:[],t:"About"}];
+const services=[["🌐","Website Development","Modern, responsive websites and landing pages."],["📱","App Development","Useful and visually polished web/mobile applications."],["⚡","Vibe Coding","Rapidly turning ideas into functional products with AI-assisted workflows."],["🎬","Video Editing","Short-form videos, reels, promos, and social content."],["📣","Social Media Marketing","Content strategy, management, campaigns, audience growth."]];
+const skills=["Vibe Coding","Web Development","App Development","UI/UX","Video Editing","Social Media Marketing","Content Creation","Digital Strategy"];
+const groups=[["Development",["HTML","CSS","JavaScript","React","Next.js","APIs","Responsive"],"#6f8bff"],["Creative",["Video Editing","Motion Graphics","Content Creation","Visual Design"],"#ff6b9b"],["Marketing",["Social Media","Content Strategy","Branding","Digital Marketing"],"#38d6c4"]];
+const links=["Email","WhatsApp","Instagram","LinkedIn","GitHub","YouTube"]; // replace '#' with real URLs
+/* ===== /DATA ===== */
+const $=s=>document.querySelector(s),rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+// galaxy
+const G=$('#galaxy'),pos=[[18,28,64],[78,24,56],[84,68,66],[50,86,54],[15,72,50],[50,10,58]];
+planets.forEach((p,k)=>{const b=document.createElement('button');b.className='planet';b.style.cssText=`--c:${p.c};left:${pos[k][0]}%;top:${pos[k][1]}%;width:${pos[k][2]}px;height:${pos[k][2]}px;margin:-${pos[k][2]/2}px;background:radial-gradient(circle at 30% 30%,${p.c},#0a0c1f 85%);animation-delay:${k*.7}s`;b.innerHTML=p.i+`<span>${p.n}</span>`;b.setAttribute('aria-label',p.n);
+b.onmouseenter=b.onfocus=()=>$('#tip').textContent=p.n+' — '+p.d;b.onclick=()=>open(p);G.appendChild(b)});
+function open(p){$('#pt').textContent=p.i+' '+p.n;$('#pd').textContent=p.d;$('#pg').innerHTML=p.p.map(x=>`<div class="card"><div class="thumb"></div><small>${p.t}</small><h3>${x}</h3><p>Short description placeholder.</p><p class="ph">Tools: placeholder</p><a class="btn" href="#">View Project</a></div>`).join('')||'<div class="card"><h3>Mubarak Shah</h3><p>Digital creator from Mianwali, Pakistan.</p></div>';$('#panel').classList.add('on')}
+$('#back').onclick=()=>$('#panel').classList.remove('on');
+addEventListener('keydown',e=>e.key==='Escape'&&$('#panel').classList.remove('on'));
+// easter egg
+let c=0;$('#core').onclick=()=>{if(++c>=5){c=0;const e=$('#egg');e.style.display='block';setTimeout(()=>e.style.display='none',3500)}};
+// content
+$('#badges').innerHTML=skills.map((s,i)=>`<span style="animation-delay:${i*.4}s">${s}</span>`).join('');
+$('#svc').innerHTML=services.map(s=>`<div class="card"><div style="font-size:28px">${s[0]}</div><h3>${s[1]}</h3><p>${s[2]}</p></div>`).join('');
+const pj=[];planets.slice(0,4).forEach(p=>p.p.slice(0,2).forEach(x=>pj.push([x,p.t])));
+$('#prj').innerHTML=pj.map(([x,t])=>`<div class="card"><div class="thumb"></div><small>${t}</small><h3>${x}</h3><p>Placeholder description.</p><a class="btn" href="#">View Project</a></div>`).join('');
+$('#links').innerHTML=links.map(l=>`<a class="btn" href="#">${l}</a>`).join('');
+$('#cf').onsubmit=e=>{e.preventDefault();$('#ok').textContent='Mission received (demo form — connect a backend or form service to send).'};
+// constellation
+(function(){const s=$('#constel');let h='',pts=[];groups.forEach((g,gi)=>{const cx=140+gi*260;g[1].forEach((n,i)=>{const a=i/g[1].length*6.283,r=70+(i%2)*40,x=cx+Math.cos(a)*r,y=210+Math.sin(a)*r*1.3,sz=3+((n.length*7+i*3)%5);pts.push([x,y,sz,n,g[2]])});
+const P=pts.slice(-g[1].length);P.forEach((p,i)=>{const q=P[(i+1)%P.length];h+=`<line x1="${p[0]}" y1="${p[1]}" x2="${q[0]}" y2="${q[1]}" stroke="${g[2]}" stroke-opacity=".35"/>`});
+h+=`<text x="${cx}" y="30" fill="${g[2]}" text-anchor="middle" font-size="14">${g[0]}</text>`});
+pts.forEach(p=>h+=`<g><circle cx="${p[0]}" cy="${p[1]}" r="${p[2]}" fill="${p[4]}" style="filter:drop-shadow(0 0 6px ${p[4]})"/><text x="${p[0]}" y="${p[1]+p[2]+13}" fill="#c6caee" text-anchor="middle" font-size="11">${p[3]}</text></g>`);s.innerHTML=h})();
+// starfield
+const cv=$('#sky'),x=cv.getContext('2d');let W,H,st=[],mx=0,my=0;
+function rs(){W=cv.width=innerWidth;H=cv.height=innerHeight;st=Array.from({length:innerWidth<700?70:160},()=>({x:Math.random()*W,y:Math.random()*H,z:Math.random()*.9+.1,t:Math.random()*6}))}
+addEventListener('resize',rs);rs();
+addEventListener('pointermove',e=>{mx=e.clientX;my=e.clientY});
+function draw(t){x.clearRect(0,0,W,H);const g=x.createRadialGradient(W*.7,H*.2,0,W*.7,H*.2,W*.6);g.addColorStop(0,'rgba(90,70,200,.14)');g.addColorStop(1,'transparent');x.fillStyle=g;x.fillRect(0,0,W,H);
+st.forEach(s=>{let px=s.x-(mx-W/2)*s.z*.02,py=s.y-(my-H/2)*s.z*.02;const dx=px-mx,dy=py-my,d=Math.hypot(dx,dy);if(d<110&&!rm){px-=dx/d*(110-d)*.12;py-=dy/d*(110-d)*.12}
+x.globalAlpha=.4+.6*Math.abs(Math.sin(t/1500*s.z+s.t));x.fillStyle='#dfe4ff';x.beginPath();x.arc(px,py,s.z*1.5,0,6.283);x.fill();if(!rm)s.y=(s.y+s.z*.08)%H});
+x.globalAlpha=1;if(!rm)requestAnimationFrame(draw)}
+requestAnimationFrame(draw);if(rm)draw(0);
+</script></body></html>
